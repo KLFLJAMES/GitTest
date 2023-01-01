@@ -9,14 +9,18 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-            Text(Date(), style: .time)
+        NavigationView {
+            VStack {
+                Image(systemName: "globe")
+                    .imageScale(.large)
+                    .foregroundColor(.accentColor)
+                Text("Hello, world!")
+                Text(Date(), style: .time)
+            }
+            .padding(.top, -200)
+            .navigationBarTitle(Text("Title"), displayMode: .inline)
         }
-        .padding()
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
