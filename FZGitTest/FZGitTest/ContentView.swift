@@ -10,11 +10,12 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         NavigationView {
-            VStack {
+            VStack(alignment: .center, spacing: 10) {
                 Image(systemName: "globe")
                     .imageScale(.large)
                     .foregroundColor(.accentColor)
                 Text("Hello, world!")
+                    .font(Font.system(size: 22))
                 Text(Date(), style: .time)
             }
             .padding(.top, -200)
