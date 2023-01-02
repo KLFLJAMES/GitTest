@@ -18,6 +18,19 @@ struct ContentView: View {
                     .font(Font.system(size: 22))
                     .lineLimit(1)
                 Text(Date(), style: .time)
+                Button {
+                    print("click")
+                } label: {
+                    Text("点击")
+                        .font(.system(size: 14))
+                        .foregroundColor(.orange)
+                        .frame(width: 50, height: 26)
+                        .overlay(alignment: .center) {
+                            RoundedRectangle(cornerRadius: 13)
+                                .stroke(Color.orange, lineWidth: 1)
+                        }
+                }
+
             }
             .padding(.top, -200)
             .navigationBarTitle(Text("Title"), displayMode: .inline)
