@@ -16,6 +16,7 @@ struct ContentView: View {
                     .foregroundColor(.accentColor)
                 Text("Hello, world!")
                     .font(Font.system(size: 22))
+                    .lineLimit(1)
                 Text(Date(), style: .time)
             }
             .padding(.top, -200)
